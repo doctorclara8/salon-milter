@@ -1,0 +1,137 @@
+@import "fonts"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	opacity: 1
+	font-family: $default-font
+	overflow-x: hidden
+	&.ishome
+		.header
+			background-image: url(../img/1.png)
+			min-height: 700px
+			height: 10vh
+			background-color: $dark
+			color: #fff
+header, section
+	position: relative
+	background-size: cover
+	background-color: center
+section
+	background-color: #fff
+
+//header
+.top-line
+	position: absolute
+	width: 100%
+	padding-top: 40px
+	z-index: 1
+.logo
+	img
+		width: 128px
+		height: auto
+		margin-left: 45px
+.phone
+	position: absolute
+	right: 85px
+	top: 44px
+	font-family: 'firasans'
+	font-size: 22px
+	white-space: nowrap
+	a
+		color: #fff
+	.fa
+		color: #555
+		margin-right: 3px
+.hamburger
+	position: absolute
+	right: 0
+	top: 34px
+	.hamburger-box
+		width: 34px
+		.hamburger-inner,
+		.hamburger-inner:after, .hamburger-inner:before
+			border-radius: 0
+			width: 34px
+			height: 2px
+			background-color: #fff
+.mm-navbar
+	padding: 10px 0 20px
+	.mm-navbar__title
+		img
+			width: 128px
+			height: auto
+body.mm-menu_opened
+	overflow-y: scroll
+.mm-panels > .mm-panel.mm-panel_opened
+	right: -18px
+
+.mm-listitem.mm-listitem_selected > .mm-listitem__text
+	background-color: transparent
+	color: $accent
+
+.mm-listview li
+	&.active
+		a
+			color: $accent
+	a
+		transition: .3s ease
+		padding: 8px 14% 0
+		&:hover
+			color: $accent
+		&::before
+			padding-right: 3px
+			content: '\f3a5'
+			font-family: 'Font Awesome\ 5 Free'
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+@import "media" // Всегда в конце
