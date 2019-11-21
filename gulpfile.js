@@ -38,8 +38,8 @@ gulp.task('scripts', function () {
 	])
 		.pipe(concat('libs.js')) // Собираем их в кучу в новом файле libs.min.js
 		// .pipe(uglify()) // Сжимаем JS файл
-		.pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
-		.pipe(browserSync.reload({ stream: true }))
+		.pipe(gulp.dest('app/js')) // Выгружаем в папку app/js
+		.pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('code', function () {

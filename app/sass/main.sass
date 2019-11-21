@@ -36,21 +36,19 @@ body textarea:required:valid
 html, body
 	height: 100%
 
+.h1,.h2, .h3,.h4, .h6,.h7
+	line-height: 1.4
+	text-transform: uppercase
+
 body
+
 	font-size: 16px
 	min-width: 320px
-	position: relative
 	line-height: 1.75
 	opacity: 1
 	font-family: $default-font
 	overflow-x: hidden
-	&.ishome
-		.header
-			background-image: url(../img/1.png)
-			min-height: 700px
-			height: 10vh
-			background-color: $dark
-			color: #fff
+	overflow-y: scroll
 header, section
 	position: relative
 	background-size: cover
@@ -59,11 +57,6 @@ section
 	background-color: #fff
 
 //header
-.top-line
-	position: absolute
-	width: 100%
-	padding-top: 40px
-	z-index: 1
 .logo
 	img
 		width: 128px
@@ -121,6 +114,135 @@ body.mm-menu_opened
 			padding-right: 3px
 			content: '\f3a5'
 			font-family: 'Font Awesome\ 5 Free'
+
+			font-size: 12px
+.button
+	border-radius: 2px
+	display: inline-block
+	text-align: center
+	vertical-align: middle
+	transition: .3s ease
+	padding: 16px 45px
+	outline: none
+	text-decoration: none
+	border: none
+	font-size: 13px
+	letter-spacing: 3px
+	text-transform: uppercase
+	font-weight: 600
+	&-about
+		background: $accent
+		color: #fff
+		&:active, &:hover
+			text-decoration: none
+			color: #fff
+		&:hover
+			background-color: lighten($accent, 5%)
+		&:active
+			background-color: darken($accent, 5%)
+
+.header
+	background-image: url(../img/1.png)
+	height: 100vh
+	min-height: 700px
+	background-color: $dark
+	color: #fff
+	&-top
+		position: absolute
+		width: 100%
+		padding-top: 40px
+		z-index: 1
+	&-main
+		display: flex
+		position: relative
+		top: 0
+		height: 100%
+	&_center
+		margin: auto
+	&-content
+		text-align: center
+		position: relative
+		.button
+			margin-top: 25px
+		p
+			margin-top: 40px
+	&-title
+		p
+			white-space: nowrap
+			margin: 0
+			text-transform: uppercase
+			font-size: 14px
+			display: flex
+			align-items: center
+			span
+				margin: 0 3px
+			&::before, &::after
+				content: ''
+				height: 1px
+				width: 100%
+				position: relative
+				background-color: #ffffff
+				display: inline-block
+		.h1
+			font-weight: 100
+			white-space: nowrap
+			font-size: 67px
+			margin: 0
+			border-bottom: 1px solid #fff
+		strong
+			display: block
+			text-transform: uppercase
+			font-size: 17px
+			margin-top: 25px
+			.fa
+				margin: 0 10px
+				color: #555
+	&-social
+		position: absolute
+		display: flex
+		right: 0
+		top: 0
+		height: 100%
+		border-left: rgba(#fff, .1) solid 1px
+		.social
+			margin: auto
+			padding: 0 13px
+			ul,li
+				margin: 0
+				padding: 0
+				list-style-type: none
+				align-items: center
+			a
+				color: #2c2c2c
+				background-color: rgba(#fff, .2)
+				display: block
+				width: 38px
+				height: 38px
+				border-radius: 10em
+				line-height: 38px
+				text-align: center
+				margin: 18px 0
+				transition: .25s ease
+				&:hover
+					background-color: rgba(#fff, .4)
+	&-contact
+		position: absolute
+		bottom: 0
+		left: 0
+		border-top: rgba(#fff, .15) 1px solid
+		padding: 13px 0
+		background-color: rgba(#151515, .15)
+		width: 100%
+		white-space: nowrap
+		a
+			color: #fff
+			font-family: 'firasans'
+		i
+			margin-right: 5px
+			color: #555
+		.row
+			div:nth-child(2)
+				text-align: center
 
 .img-responsive
 	display: block
