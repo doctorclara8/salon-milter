@@ -7,6 +7,8 @@
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
  */
+@import url(../libs/owl.carousel/dist/assets/owl.carousel.min.css);
+@import url(../libs/owl.carousel/dist/assets/owl.theme.default.min.css);
 .hamburger {
   padding: 15px 15px;
   display: inline-block;

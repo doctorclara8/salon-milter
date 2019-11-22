@@ -34,6 +34,8 @@ gulp.task('scripts', function () {
 		'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
 		'app/libs/mmenu/dist/mmenu.js',
 		'app/libs/bootstrap/dist/js/bootstrap.js',
+		'app/libs/owl.carousel/dist/owl.carousel.min.js',
+		'app/libs/jQuery.equalHeights/jquery.equalheights.min.js',
 		'app/js/common.js'
 	])
 		.pipe(concat('libs.js')) // Собираем их в кучу в новом файле libs.min.js

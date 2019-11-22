@@ -140,6 +140,14 @@ body.mm-menu_opened
 			background-color: lighten($accent, 5%)
 		&:active
 			background-color: darken($accent, 5%)
+	&-white
+		background: #fff
+		color: #444
+		&:active, &:hover
+			text-decoration: none
+			color: #444
+		&:active
+			background-color: darken(#fff, 5%)
 
 .header
 	background-image: url(../img/1.png)
@@ -243,6 +251,94 @@ body.mm-menu_opened
 		.row
 			div:nth-child(2)
 				text-align: center
+
+$colors: $blue, $red, $accent
+
+@for $i from 1 through length($colors)
+	.carousel-services .owl-item:nth-child(#{length($colors)}n+#{$i})
+		background-color: nth($colors, $i)
+
+.carousel-services
+	background-color: $dark
+	.owl
+		&-nav
+			position: absolute
+			width: 100%
+			top: 0
+			button.owl-prev, button.owl-next
+				width: 64px
+				height: 64px
+				background-color: #fff
+				color: #222
+				position: absolute
+				text-align: center
+				line-height: 64px
+				font-size: 26px
+				outline: none
+		&-prev
+			left: 0
+		&-next
+			right: 0
+	&-item
+		color: #fff
+		font-size: 18px
+		position: relative
+		font-weight: 300
+		display: flex
+		flex-direction: column-reverse
+	.carousel-logo
+		text-align: center
+		img
+			width: 100px
+			height: auto
+			display: inline-block
+
+	.owl-item
+		&:nth-child(2n)
+			.carousel-services-item
+				flex-direction: column
+	&-img
+		background: url(../img/1s.png)
+		background-size: cover
+		background-position: center
+		opacity: .8
+		transition: .5s ease
+		&:hover
+			opacity: 1
+	&-main
+		margin: auto
+		text-align: center
+		width: 100%
+	&-content
+		display: flex
+		position: relative
+		padding: 60px 10%
+		.h3
+			font-weight: 800
+			font-size: 30px
+			margin: 5px 0 20px
+			span
+				font-weight: 300
+				font-size: 18px
+				display: block
+
+	&-list
+		margin: 0 0 25px
+		padding: 0
+		list-style-type: none
+		li
+			padding: 9px
+			border-bottom: 1px solid rgba(#000, .12)
+			&:last-child
+				border-bottom: none
+			strong
+				font-family: firasans
+				color: #4a4a4a
+				i
+					font-size: 14px
+
+.owl-carousel .owl-item
+	backface-visibility: inherit
 
 .img-responsive
 	display: block
