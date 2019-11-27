@@ -10,28 +10,12 @@
 		-moz-box-sizing: border-box
 		box-sizing: border-box
 
-*::-webkit-input-placeholder
-	color: #666
-	opacity: 1
-
-*:-moz-placeholder
-	color: #666
-	opacity: 1
-
-*::-moz-placeholder
-	color: #666
-	opacity: 1
-
-*:-ms-input-placeholder
-	color: #666
-	opacity: 1
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-	color: #666
-body input:required:valid,
-body textarea:required:valid
-	color: #666
+// body input:focus:required:invalid,
+// body textarea:focus:required:invalid
+// 	color: #666
+// body input:required:valid,
+// body textarea:required:valid
+// 	color: #666
 
 html, body
 	height: 100%
@@ -55,6 +39,15 @@ header, section
 	background-color: center
 section
 	background-color: #fff
+	&.inverse
+		color: #fff
+		background-color: #dark
+	.h2
+		font-size: 30px
+		font-weight: 800
+		color: $accent
+		span
+			color: #fff
 
 //header
 .logo
@@ -340,6 +333,205 @@ $colors: $blue, $red, $accent
 .owl-carousel .owl-item
 	backface-visibility: inherit
 
+.s
+	&-galery, &-review, &-parthners
+		padding: 5% 0
+	&-galery
+		p
+			margin: 30px 0
+			font-size: 18px
+	&-call
+		background-size: contain
+		background-repeat: no-repeat
+		background-color: #fff
+		background-position: 10%
+		&::before
+			content: ''
+			width: 50%
+			right: 0
+			height: 100%
+			position: absolute
+			background-color: rgba($accent, .92)
+
+.section
+	&-overley
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background-color: $over
+			opacity: .92
+
+.fotorama
+	background-color: rgba($dark, .4)
+	&__nav
+		&-wrap
+			position: absolute
+			bottom: 15px
+			padding: 0 30px
+			width: 100%
+	&__thumb
+		border: 4px solid #fff
+		transition: border-color .5s ease
+		&-border
+			border-color: $accent
+
+	&__arr
+		background: transparent
+		&--next,
+		&--prev
+			&::before
+				font-size: 32px
+				font-family: 'Font Awesome\ 5 Free'
+				font-weight: 900
+		&--next
+			&::before
+				content: '\f0da'
+		&--prev
+			&::before
+				content: '\f0d9'
+	&__active
+		.fotorama__thumb
+			border-color: $accent
+input, textarea, select
+
+	background-color: transparent
+	border: solid 1px rgba(#000, .1)
+	border-bottom: solid 2px rgba(#000, .1)
+	border-radius: 2px
+	padding: 8px 22px
+	outline: none
+	display: inline-block
+	width: 100%
+	font-size: 16px
+	color: #333
+
+.success
+	display: none
+	position: absolute
+	right: 0
+	left: 0
+	bottom: 0
+	top: 0
+	font-weight: 600
+	text-transform: uppercase
+	z-index: 10
+	font-size: 30px
+	span
+		margin: auto
+		// все после этого елемента success
+	& ~ *
+		transition: all .5s ease
+	&.active
+		& ~ *
+			filter: blur(10px)
+.callback
+	padding: 25% 0
+	position: relative
+	&-logo
+		img
+			width: 100px
+			height: auto
+	&-head
+		margin: 0
+		font-size: 30px
+		color: #fff
+	p
+		margin: 0
+	input, textarea, select
+		color: #fff
+		margin: 17px 0 0
+		&::-webkit-input-placeholder
+			color: #fff
+			opacity: 1
+
+		&:-moz-placeholder
+			color: #fff
+			opacity: 1
+
+		&::-moz-placeholder
+			color: #fff
+			opacity: 1
+
+		&:-ms-input-placeholder
+			color: #fff
+		option
+			color: #333
+			&-active
+				background-color: #000
+			&-selected
+				color: #fff
+	button
+		margin: 30px 0 0
+.carousel-review
+	&-item
+		color: #fff
+		font-size: 18px
+		// position: relative
+	.review
+		&-name, &-date
+			font-family: 'Times New Roman',serif
+			font-style: italic
+		&-name
+			font-size: 30px
+			font-weight: 700
+		&-date
+			font-size: 16px
+			color: #888
+		&-stars
+			margin: 18px 0 30px
+			color: $accent
+			font-size: 14px
+		&-text
+			color: #cfcbcb
+	&-qoutes
+		position: absolute
+		width: 100%
+		&::after, &::before
+			position: absolute
+			font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands'
+			display: block
+			color: $accent
+			font-size: 32px
+			font-weight: 900
+			line-height: 0
+			top: 0
+			left: 0
+			// transform: rotate(180deg)
+
+		&::after
+			content: '\f10e'
+
+			left: 105%
+			top: 200px
+			// transform: rotate(0)
+
+		&::before
+			content: '\f10d'
+
+			top: 200px
+			left: -7%
+
+	.owl
+		&-dots
+			width: 100%
+			text-align: center
+			margin-top: 60px
+			button.owl-dot
+				outline: none
+				span
+					width: 8px
+					height: 8px
+					background-color: #fff
+					border-radius: 10em
+					display: inline-block
+					margin: 7px
+				&.active, &:hover
+					span
+						background-color: $accent
 .img-responsive
 	display: block
 	max-width: 100%

@@ -9,6 +9,8 @@
  */
 @import url(../libs/owl.carousel/dist/assets/owl.carousel.min.css);
 @import url(../libs/owl.carousel/dist/assets/owl.theme.default.min.css);
+@import url(../libs/fotorama/fotorama.css);
+@import url(../libs/selectize/dist/css/selectize.default.css);
 .hamburger {
   padding: 15px 15px;
   display: inline-block;
