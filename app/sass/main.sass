@@ -107,7 +107,6 @@ body.mm-menu_opened
 			padding-right: 3px
 			content: '\f3a5'
 			font-family: 'Font Awesome\ 5 Free'
-
 			font-size: 12px
 .button
 	border-radius: 2px
@@ -352,6 +351,13 @@ $colors: $blue, $red, $accent
 			height: 100%
 			position: absolute
 			background-color: rgba($accent, .92)
+	&-parthners
+		.h2
+			span
+				color: $accent
+		&.section-overley
+			&::before
+				background-color: #fff
 
 .section
 	&-overley
@@ -485,6 +491,8 @@ input, textarea, select
 			margin: 18px 0 30px
 			color: $accent
 			font-size: 14px
+			.fas
+				margin 0 2.5px
 		&-text
 			color: #cfcbcb
 	&-qoutes
@@ -500,38 +508,78 @@ input, textarea, select
 			line-height: 0
 			top: 0
 			left: 0
-			// transform: rotate(180deg)
 
 		&::after
 			content: '\f10e'
 
 			left: 105%
 			top: 200px
-			// transform: rotate(0)
 
 		&::before
 			content: '\f10d'
 
 			top: 200px
 			left: -7%
-
-	.owl
-		&-dots
-			width: 100%
-			text-align: center
-			margin-top: 60px
-			button.owl-dot
-				outline: none
+.owl
+	&-dots
+		width: 100%
+		text-align: center
+		margin-top: 60px
+		button.owl-dot
+			outline: none
+			span
+				width: 8px
+				height: 8px
+				background-color: #fff
+				border-radius: 10em
+				display: inline-block
+				margin: 7px
+				transition: transform .5s ease, bacground-color .3s ease
+			&.active, &:hover
 				span
-					width: 8px
-					height: 8px
-					background-color: #fff
-					border-radius: 10em
-					display: inline-block
-					margin: 7px
+					background-color: $accent
+					transform: scale(1.4)
+
+.carousel-parthners
+	&-item
+		display: flex
+		height: 100%
+		margin: auto
+	.owl
+		&-stage
+			display: flex
+		&-item
+			margin: 30px 0 0
+			img
+				display: inline-block
+				max-width: 100%
+				width: auto
+				margin: auto
+		&-dots
+			button.owl-dot
+				span
+					background-color: #000
 				&.active, &:hover
 					span
 						background-color: $accent
+		&-nav
+			position: absolute
+			width: 100%
+			top: 50px
+			button.owl-prev, button.owl-next
+				color: #333
+				position: absolute
+				text-align: center
+				line-height: 26px
+				font-size: 26px
+				outline: none
+				transition: .5s ease
+				&:hover
+					color: #666
+		&-prev
+			left: -60px
+		&-next
+			right: -60px
 .img-responsive
 	display: block
 	max-width: 100%

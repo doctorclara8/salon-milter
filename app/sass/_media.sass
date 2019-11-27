@@ -69,10 +69,23 @@
 			background-size: cover
 			&::before
 				width: 100%
+	.carousel
+		&-review
+			&-qoutes
+				display: none
+			.review-text
+				font-size: 14px
+		&-parthners
+			.owl
+				&-prev
+					left: 30px
+				&-next
+					right: 30px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-
+	.mm-listview li
+		font-size: 17px
 	.hamburger-box
 		width: 30px
 		.hamburger-inner,
@@ -99,20 +112,35 @@
 		padding: 10px 30px
 		font-size: 11px
 	.s
-		&-galery, &-call
+		&-galery, &-call, &-review, &-parthners
 			p
 				font-size: 13px
-			.h2
+			.h2, .h4
 				font-size: 25px
-	.carousel-services
-		&-item
+	.review
+		&-name
+			font-size: 20px
+		&-date
+			font-size: 17px
+		&-text
+			font-size: 13px
+		&-stars
+			margin: 16px 0 25px
 			font-size: 14px
-		&-content
-			padding: 40px 10%
-			.h3
-				font-size: 22px
-				span
-					font-size: 17px
+	.carousel
+		&-review
+		.owl
+			&-dots
+				margin-top: 40px
+		&-services
+			&-item
+				font-size: 14px
+			&-content
+				padding: 40px 10%
+				.h3
+					font-size: 22px
+					span
+						font-size: 17px
 		.carousel-logo
 			img
 				width: 80px
@@ -134,6 +162,8 @@
 		.hamburger-inner,
 		.hamburger-inner:after, .hamburger-inner:before
 			width: 25px
+	.mm-listview li
+		font-size: 12px
 	.header
 		.phone
 			font-size: 16px
@@ -157,10 +187,10 @@
 		padding: 9px 28px
 		font-size: 10px
 	.s
-		&-galery, &-call
+		&-galery, &-call, &-review, &-parthners
 			p
 				font-size: 11px
-			.h2
+			.h2, .h4
 				font-size: 20px
 
 	.carousel-services
@@ -183,6 +213,16 @@
 					height: 32px
 					line-height: 32px
 					font-size: 13px
+	.review
+		&-name
+			font-size: 18px
+		&-date
+			font-size: 14px
+		&-text
+			font-size: 11px
+		&-stars
+			margin: 12px 0 20px
+			font-size: 11px
 
 /*==========  Mobile First  ==========*/
 

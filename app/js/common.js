@@ -49,6 +49,38 @@ $(function () {
 		}
 
 	});
+	$('.carousel-parthners').owlCarousel({
+		nav: true,
+		loop: true,
+		dots: true,
+		smartSpeed: 700,
+		navText: ['<span><i class="fas fa-angle-left"></i></span>', '<span><i class="fas fa-angle-right"></span>'],
+		responsiveClass: true,
+		responsive: {
+
+			0: {
+				items: 1
+			},
+			768: {
+
+				items: 2
+
+			},
+
+			992: {
+
+				items: 3
+
+			},
+
+			1200: {
+
+				items: 4
+
+			}
+		}
+
+	});
 	$('.carousel-review').owlCarousel({
 		items: 1,
 		loop: true,
