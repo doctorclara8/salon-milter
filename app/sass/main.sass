@@ -48,6 +48,47 @@ section
 		color: $accent
 		span
 			color: #fff
+@mixin opacity ($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+.preloader
+	position: fixed
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	z-index: 100
+	background-color: $dark
+	.pulse
+		top: 50vh
+		left: 50%
+		position: relative
+		margin: -40px 0 0 -40px
+		&::before, &::after
+			content: ''
+			border: 5px solid $accent
+			width: 80px
+			height: 80px
+			border-radius: 10em
+			position: absolute
+		&::before
+			animation: pulse-outer .8s ease-in infinite
+		&::after
+			animation: pulse-inner .8s linear infinite
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+@keyframes pulse-inner
+	0%
+		@include opacity(0)
+		transform: scale(0)
+	100%
+		@include opacity(100)
+		transform: scale(1)
 
 //header
 .logo
@@ -584,6 +625,7 @@ input, textarea, select
 	background-color: $dark
 	padding: 3% 0
 	color: #555
+	font-size: 16px
 	&-column
 		margin: 15px 0 0
 		img
@@ -606,6 +648,8 @@ input, textarea, select
 				content: '\f3a5'
 				font-family: 'Font Awesome\ 5 Free'
 				font-size: 12px
+			&.active
+				color: $accent
 	&-contact
 		color: #fff
 		i
@@ -621,8 +665,6 @@ input, textarea, select
 		margin: 0 0 20px
 
 	&-social
-		// margin: auto
-		// padding: 0 13px
 		ul,li
 			margin: 0
 			padding: 0
@@ -646,12 +688,36 @@ input, textarea, select
 	.google-cart
 		opacity: .7
 		transition: opacity .5s ease
+		width: 100%
+		height: 100%
 		&:hover
 			opacity: 1
 
 .text-center
 	text-align: center
 
+.top
+	position: fixed
+	bottom: 25px
+	right: -100px
+	transition: .3s ease
+	z-index: 12
+	border-radius: 10em
+	background-color: #eee
+	color: #333
+	font-size: 26px
+	height: 50px
+	width: 50px
+	line-height: 50px
+	text-align: center
+	cursor: pointer
+	opacity: .5
+	&:hover
+		opacity: 1
+		background-color: $accent
+		color: #fff
+	&.active
+		right: 25px
 ::selection
 	background-color: $accent
 	color: #fff

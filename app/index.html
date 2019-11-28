@@ -21,6 +21,9 @@
 </head>
 
 <body class="ishome">
+	<div class="preloader">
+		<div class="pulse"></div>
+	</div>
 	<div class="my-page">
 		<div id="my-header">
 			<header class="header">
@@ -35,17 +38,17 @@
 						<span class="hamburger-box"><span class="hamburger-inner"></span></span>
 					</a>
 					<nav id="my-menu">
-						<ul>
-							<li><a href="#">Парикмахерский сервис</a></li>
-							<li class="active"><a href="#">Косметологический сервис</a></li>
-							<li><a href="#">Маникюрный сервис</a></li>
-							<li><a href="#">Массаж и SPA</a></li>
-							<li><a href="#">Солярий</a></li>
-							<li><a href="#">Наши специалисты</a></li>
-							<li><a href="#">Новости</a></li>
-							<li><a href="#">Прайс-лист</a></li>
-							<li><a href="#">Наши сертификаты</a></li>
-							<li><a href="#">О салоне</a></li>
+						<ul class="menu">
+							<li><a href="#barber">Парикмахерский сервис</a></li>
+							<li><a href="#cosmetology">Косметологический сервис</a></li>
+							<li><a href="#manicure">Маникюрный сервис</a></li>
+							<li><a href="#spa">Массаж и SPA</a></li>
+							<li><a href="#about">О салоне</a></li>
+							<li><a href="#call">Оставить заявку</a></li>
+							<li><a href="#parthners">Наши партнеры</a></li>
+							<li><a href="#review">Отзывы</a></li>
+							<li><a href="#contact">Контакты</a></li>
+
 						</ul>
 					</nav>
 				</div>
@@ -106,7 +109,7 @@
 		<div id="my-content">
 			<section class="s-services">
 				<div class="owl-carousel carousel-services">
-					<div class="carousel-services-item">
+					<div class="carousel-services-item" id="cosmetology">
 						<div class="carousel-services-content">
 							<div class="carousel-services-main">
 								<div class="carousel-logo">
@@ -125,7 +128,7 @@
 
 						</div>
 					</div>
-					<div class="carousel-services-item">
+					<div class="carousel-services-item" id="barber">
 						<div class="carousel-services-content">
 							<div class="carousel-services-main">
 								<div class="carousel-logo">
@@ -144,7 +147,7 @@
 
 						</div>
 					</div>
-					<div class="carousel-services-item">
+					<div class="carousel-services-item" id="manicure">
 						<div class="carousel-services-content">
 							<div class="carousel-services-main">
 								<div class="carousel-logo">
@@ -163,13 +166,13 @@
 						<div class="carousel-services-img" style="background-image: url(img/2s.png);">
 						</div>
 					</div>
-					<div class="carousel-services-item">
+					<div class="carousel-services-item" id="spa">
 						<div class="carousel-services-content">
 							<div class="carousel-services-main">
 								<div class="carousel-logo">
 									<img src="img/logo-2.svg" alt="SMidler">
 								</div>
-								<h3 class="h3">Маникюрный сервис</h3>
+								<h3 class="h3">Spa</h3>
 								<ul class="carousel-services-list">
 									<li>Ключевая услуга #1 - <strong>8500<i class="fa fa-ruble-sign"></i></strong></li>
 									<li>Ключевая услуга #2 - <strong>8500<i class="fa fa-ruble-sign"></i></strong></li>
@@ -183,7 +186,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="s-galery inverse section-overley" style="background-image: url(img/2s.png);">
+			<section class="s-galery inverse section-overley" style="background-image: url(img/2s.png);" id="about">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-5">
@@ -209,7 +212,7 @@
 				</div>
 			</section>
 
-			<section class="s-call inverse" style="background-image: url(img/4.png);">
+			<section class="s-call inverse" style="background-image: url(img/4.png);" id="call">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-5 col-md-6 ml-auto">
@@ -240,7 +243,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="s-review inverse section-overley" style="background-image: url(img/6.jpg);">
+			<section class="s-review inverse section-overley" style="background-image: url(img/6.jpg);" id="review">
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-md-12">
@@ -248,7 +251,6 @@
 						</div>
 						<div class="col-md-10">
 							<div class="carousel-review-qoutes">
-
 							</div>
 							<div class="owl-carousel carousel-review">
 								<div class="carousel-review-item">
@@ -310,7 +312,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="s-parthners section-overley" style="background-image: url(img/2s.png);">
+			<section class="s-parthners section-overley" style="background-image: url(img/2s.png);" id="parthners">
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-md-12">
@@ -349,76 +351,74 @@
 				</div>
 			</section>
 		</div>
-	</div>
-	</div>
-	<div id="my-footer">
-		<footer class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-2 col-md-4 col-12">
-						<div class="footer-column">
-							<img src="img/logo-1.svg" alt="SMidtler">
-							<p>Салон красоты
-								бизнес-класса в Москве</p>
-							<div class="footer-social">
-								<ul>
-									<li><a href="#">
-											<i class="fab fa-facebook-f "></i>
-										</a></li>
-									<li><a href="#">
-											<i class="fab fa-instagram"></i>
-										</a></li>
-									<li><a href="#">
-											<i class="fab fa-vk "></i>
-										</a></li>
-								</ul>
-							</div>
-						</div>
-
-
-					</div>
-					<div class="col-lg-3 col-md-4 col-12">
-						<div class="footer-column">
-							<nav class="footer-menu">
-								<ul>
-									<li><a href="#">Парикмахерский сервис</a></li>
-									<li class="active"><a href="#">Косметологический сервис</a></li>
-									<li><a href="#">Маникюрный сервис</a></li>
-									<li><a href="#">Массаж и SPA</a></li>
-									<li><a href="#">Солярий</a></li>
-									<li><a href="#">Наши специалисты</a></li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-4 col-12">
-						<div class="footer-column">
-							<div class="footer-contact">
-								<div class="footer-adress">
-									<i class="fas fa-location-arrow"></i>г.Москва, ул.Ивана Бабушкина, 2с11
-								</div>
-								<div class="footer-work">
-									<i class="far fa-clock"></i> Время работы: ежедневно: с 10:00 до 18:00
-								</div>
-								<div class="footer-phone">
-									<i class="fa fa-mobile-alt"></i> <a href="tel:+74951189435">+7 (495) 118-94-35</a>
+		<div id="my-footer">
+			<footer class="footer" id="contact">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2 col-md-4 col-12">
+							<div class="footer-column">
+								<img src="img/logo-1.svg" alt="SMidtler">
+								<p>Салон красоты
+									бизнес-класса в Москве</p>
+								<div class="footer-social">
+									<ul>
+										<li><a href="#">
+												<i class="fab fa-facebook-f "></i>
+											</a></li>
+										<li><a href="#">
+												<i class="fab fa-instagram"></i>
+											</a></li>
+										<li><a href="#">
+												<i class="fab fa-vk "></i>
+											</a></li>
+									</ul>
 								</div>
 							</div>
-
 						</div>
-					</div>
-					<div class="col-lg-4 col-12">
-						<iframe class="google-cart"
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16133.075953985466!2d26.638110354757153!3d49.51859362483061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4731fcfdd0a4d6ff%3A0xc20cb50ad801e0e8!2z0J3QsNGA0LrQtdCy0LjRh9C4LCDQpdC80LXQu9GM0L3QuNGG0LrQsNGPINC-0LHQu9Cw0YHRgtGM!5e0!3m2!1sru!2sua!4v1574947612960!5m2!1sru!2sua"
-							width="100%" height="100%" frameborder="0" style="border:0;"
-							allowfullscreen="true"></iframe>
+						<div class="col-lg-3 col-md-4 col-12">
+							<div class="footer-column">
+								<nav class="footer-menu">
+									<ul class="menu">
+										<li><a href="#barber">Парикмахерский сервис</a></li>
+										<li><a href="#cosmetology">Косметологический сервис</a></li>
+										<li><a href="#manicure">Маникюрный сервис</a></li>
+										<li><a href="#spa">Массаж и SPA</a></li>
+										<li><a href="#about">О салоне</a></li>
+
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-12">
+							<div class="footer-column">
+								<div class="footer-contact">
+									<div class="footer-adress">
+										<i class="fas fa-location-arrow"></i>г.Москва, ул.Ивана Бабушкина, 2с11
+									</div>
+									<div class="footer-work">
+										<i class="far fa-clock"></i> Время работы: ежедневно: с 10:00 до 18:00
+									</div>
+									<div class="footer-phone">
+										<i class="fa fa-mobile-alt"></i> <a href="tel:+74951189435">+7 (495)
+											118-94-35</a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-lg-4 col-12">
+							<iframe class="google-cart"
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16133.075953985466!2d26.638110354757153!3d49.51859362483061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4731fcfdd0a4d6ff%3A0xc20cb50ad801e0e8!2z0J3QsNGA0LrQtdCy0LjRh9C4LCDQpdC80LXQu9GM0L3QuNGG0LrQsNGPINC-0LHQu9Cw0YHRgtGM!5e0!3m2!1sru!2sua!4v1574947612960!5m2!1sru!2sua"
+								frameborder="0" style="border:0;" allowfullscreen="true"></iframe>
+						</div>
 					</div>
 				</div>
-			</div>
-		</footer>
+			</footer>
+		</div>
 	</div>
+	<div class="top">
+		<i class="fas fa-angle-double-up"></i>
 	</div>
-
 	<link rel="stylesheet" href="css/libs.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/v4-shims.js"></script>

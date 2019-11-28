@@ -5,7 +5,21 @@ $(function () {
 			"position-right"],
 		navbar: { title: '<img src="img/logo-1.svg" alt="SMitler">' },
 	});
+	$('ul.menu a[href^="#"').click(function () {
+		var target = $(this).attr('href');
+		setTimeout(function () {
+			$("#my-menu").data("mmenu").close();
+		}, 300);
+		setTimeout(function () {
+			$('html, body').animate({
+				scrollTop: $(target).offset().top
+			}, 500);
+			$('ul.menu a[href^="#"').removeClass('active');
+			$(this).addClass('active')
+		}, 2000);
 
+		return false;
+	});
 	var api = $('#my-menu').data('mmenu');
 	api.bind('open:finish', function () {
 		$('.hamburger').addClass('is-active');
@@ -14,6 +28,18 @@ $(function () {
 	});
 
 
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > $(this).height()) {
+			$('.top').addClass('active');
+		}
+		else {
+			$('.top').removeClass('active');
+		}
+	});
+	$('.top').click(function () {
+		$('html, body').stop().animate(
+			{ scrollTop: 0 }, 'slow', 'swing')
+	})
 	$('.carousel-services').on('initialized.owl.carousel', function () {
 		setTimeout(function () {
 			carousel_s();
@@ -149,4 +175,8 @@ $(function () {
 		onRecize();
 	}
 
+	$(window).on('load', function () {
+		$('.preloader').delay(1000).fadeOut('slow')
+
+	})
 });
