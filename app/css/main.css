@@ -612,10 +612,78 @@ input, textarea, select {
 .carousel-parthners .owl-next {
   right: -60px; }
 
-.img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto; }
+.footer {
+  background-color: #1a1a1a;
+  padding: 3% 0;
+  color: #555; }
+  .footer-column {
+    margin: 15px 0 0; }
+    .footer-column img {
+      width: 128px;
+      height: auto; }
+    .footer-column p {
+      margin: 10px 0; }
+  .footer-menu ul, .footer-menu li {
+    list-style-type: none;
+    padding: 0 0 7px; }
+  .footer-menu a {
+    color: #999;
+    -webkit-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+    padding: 8px 0 0; }
+    .footer-menu a:hover {
+      color: #F9C869; }
+    .footer-menu a::before {
+      padding-right: 6px;
+      content: '\f3a5';
+      font-family: 'Font Awesome\ 5 Free';
+      font-size: 12px; }
+  .footer-contact {
+    color: #fff; }
+    .footer-contact i {
+      color: #666;
+      margin-right: 6px; }
+    .footer-contact a {
+      color: #fff; }
+      .footer-contact a:hover {
+        color: #F9C869; }
+  .footer-phone {
+    font-size: 24px; }
+  .footer-adress, .footer-work, .footer-phone {
+    margin: 0 0 20px; }
+  .footer-social ul, .footer-social li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .footer-social li {
+    display: inline-block; }
+  .footer-social a {
+    color: #999;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: block;
+    width: 38px;
+    height: 38px;
+    border-radius: 10em;
+    line-height: 38px;
+    text-align: center;
+    margin: 18px 0;
+    -webkit-transition: .25s ease;
+    -o-transition: .25s ease;
+    transition: .25s ease; }
+    .footer-social a:hover {
+      background-color: rgba(255, 255, 255, 0.4); }
+  .footer .google-cart {
+    opacity: .7;
+    -webkit-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    transition: opacity .5s ease; }
+    .footer .google-cart:hover {
+      opacity: 1; }
 
 .text-center {
   text-align: center; }
